@@ -1,0 +1,17 @@
+@import "../index";
+
+.content {
+  margin: 0 auto;
+  padding: 0.5em;
+  font-size: calc(1em + 0.5vh);
+  @include desktop() {
+    // padding-top: 10em;
+    font-size: calc(1em + 0.3vw);
+    padding: 0;
+    display: grid;
+    grid-template-columns: #{$leftcol} auto;
+    z-index: 10;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../index";
+
+.title-block {
+  min-height: 250px;
+  text-align: center;
+  @include desktop() {
+    max-width: 15em;
+    grid-column: 1;
+    align-self: center;
+    text-align: right;
+    min-height: 200px;
+    padding: 0 0.5em;
+  }
+
+  &__title {
+    color: color(text);
+    margin: 0.5em;
+    font-size: 2em;
+    @include desktop() {
+      padding-top: #{$topbarHeight};
+      font-size: 1.7em;
+      margin: 0;
+    }
+  }
+  &__secondary {
+    line-height: 1em;
+    text-align: right;
+    padding-left: 3em;
+    @include desktop {
+      padding-left: 0;
+    }
+  }
+}

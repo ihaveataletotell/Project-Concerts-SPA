@@ -1,0 +1,88 @@
+@import "../index";
+
+.news {
+  z-index: 10;
+  @include desktop() {
+    padding-left: 0.5em;
+    background: color(primary);
+    min-width: 500px;
+    height: 100vh;
+    overflow: auto;
+  }
+
+  &__no-news {
+    margin: 10em auto;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+@keyframes showNewsItem {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.news-item {
+  animation: showNewsItem 1s linear;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 1em;
+  padding: 5px;
+  @include desktop() {
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__date {
+    flex: 1 1 5em;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: color(secondary-light);
+    font-weight: bold;
+    background: #ffb040;
+    border-radius: 20px;
+    padding: 3px 10px;
+    margin: 0.5em 0;
+  }
+
+  &__title {
+    flex: 3 1 auto;
+    color: color(title);
+    margin: 0;
+  }
+
+  &__body {
+    @include desktop() {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+    }
+  }
+
+  &__image {
+    @include desktop() {
+      flex: 1 1;
+      padding-right: 0.5em;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 1.3em;
+    @include desktop {
+      flex: 1 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

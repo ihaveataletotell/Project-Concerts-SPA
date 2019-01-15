@@ -1,0 +1,20 @@
+$colors: (
+  primary: #000,
+  secondary-light: #ff4f00,
+  secondary-dark: #0d162f,
+  title: #a63400,
+  text: #fff,
+  scroll: #ffc573
+);
+$leftcol: 30%;
+$desktop: 720px;
+$topbarHeight: 2.2em;
+// $desktop-rightcol-width: 60%;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@function color($name) {
+  @return map-get($colors, $name);
+}

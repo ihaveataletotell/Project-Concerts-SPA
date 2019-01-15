@@ -1,0 +1,32 @@
+@import "../index";
+
+$shadecolor: darken(color(text), 30%);
+
+.search {
+  &__search-field {
+    background: none;
+    border: none;
+    outline: none;
+    color: color(text);
+    line-height: 1em;
+    font-size: 0.7em;
+    border-bottom: 1px solid $shadecolor;
+    width: 150px;
+  }
+  @keyframes focusSearchField {
+    from {
+      width: 150px;
+    }
+    to {
+      width: 200px;
+    }
+  }
+  &__search-field::placeholder {
+    color: $shadecolor;
+  }
+  &__search-field:focus {
+    border-bottom: 1px solid color(text);
+    animation: focusSearchField 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+}

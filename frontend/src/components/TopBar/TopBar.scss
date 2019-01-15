@@ -1,0 +1,16 @@
+@import "../index";
+
+.topbar {
+  @include desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: #{$topbarHeight};
+    background: #183651;
+    padding: 10px;
+    border-bottom: 2px solid black;
+  }
+}
