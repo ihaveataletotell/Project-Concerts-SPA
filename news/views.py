@@ -11,10 +11,6 @@ class NewsList(generics.ListCreateAPIView):
     return {'request': self.request}
 
   def get_queryset(self):
-    start = self.request.query_params.get('start', None)
-    end = self.request.query_params.get('end', None)
-    if start is None:
-      start = 0
-    if end is 0:
-      end = None
-    return News.objects.all()[int(start):int(end)]
+    # start = self.request.query_params.get('start', 0)
+    # end = self.request.query_params.get('end', 0)
+    return News.objects.all()
