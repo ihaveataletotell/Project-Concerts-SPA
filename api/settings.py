@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'concerts-spa.herokuapp.com'
+    'concerts-spa.herokuapp.com',
+    'limitless-ridge-08210-e1063db36504.herokuapp.com'
 ]
 
 
