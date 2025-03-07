@@ -8,11 +8,6 @@ function TitleBlock() {
       <p className="title-block__secondary">
         Успейте купить билеты на самые зрелищные мероприятия
       </p>
-      <span className="author">
-        <a href="https://github.com/HegemonX" className="link">
-          Maxim Odorodko
-        </a>
-      </span>
     </header>
   );
 }

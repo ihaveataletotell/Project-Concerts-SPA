@@ -2,10 +2,12 @@
 
 # dependencies
 /.vscode
+.idea
 /node_modules
 /.pnp
 .pnp.js
 *.pyc
+
 
 # testing
 /coverage
